@@ -19,11 +19,22 @@ public class JavaServlets41 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+String usersName = request.getParameter("yourname");
+		
+		String theLang = request.getParameter("Language");
+		
+		int firstNum = Integer.parseInt(request.getParameter("firstnum"));
+		int secondNum = Integer.parseInt(request.getParameter("secondnum"));
+		int sumONum = firstNum + secondNum;
+		
 		response.setContentType("text/html");
 		
 		PrintWriter output = response.getWriter();
 		
-		output.println("<html><body><h3>Hello Servlets</h3></body></html>");
+		output.println("<html><body><h3>Hello " + usersName);
+		
+		output.println("</h3><br />" + firstNum + " + " + secondNum);
+		output.println(" = " + sumONum + "<br />Speaks " + theLang + "</body></html>");
 		
 	}
 
@@ -31,7 +42,6 @@ public class JavaServlets41 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

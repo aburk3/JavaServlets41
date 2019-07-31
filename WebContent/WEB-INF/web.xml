@@ -6,7 +6,7 @@
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>JavaServlets41</servlet-name>
+  	<servlet-name>helloservlets.JavaServlets41</servlet-name>
   	<url-pattern>/JavaServlets41</url-pattern>
   </servlet-mapping>
 </web-app>
